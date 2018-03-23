@@ -3,9 +3,8 @@
 	justify-content: center;
 }
 .navTop{
-	width: 1270px;
-	margin-left: -635px;
-	left: 50%;
+	width: 76%;
+	margin-left: 12%;
 	display: flex;
 	justify-content:space-between ;
 }

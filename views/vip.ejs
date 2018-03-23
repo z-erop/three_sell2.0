@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="关键词">
+
+    <!--三个bootstrap带有的meta标签-->
+    <meta name="Description" content="描述">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/vip.css">
+
+    <script src="js/MyTop.js"></script>
+    <link rel="stylesheet" href="css/myTop.css">
+    <link rel="stylesheet" href="css/myFoot.css">
+    <script src="http://apps.bdimg.com/libs/vue/1.0.8/vue.js"></script>
+    <title>one is never too old to learn </title>
+    <style>
+        * {margin: 0;padding: 0;font-family: Microsoft YaHei, serif;}
+        body, dl, dd, h1, h2, h3, h4, h5, h6 {margin: 0;}
+        ol, ul, li {margin: 0;padding: 0;list-style: none;}
+        a{text-decoration: none;}
+        img{border: none;}
+
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <my-top></my-top>
+         <div class="Body">
+            <div class="vipTop"></div>
+            <div class="vipMiddle"></div>
+            <div class="vipContent">
+                <div class="left">
+                    <ul>
+                        <li><a href="" >会员首页</a></li>
+                        <li><a href="">我的卡卷</a></li>
+                        <li><a href="">我的K金</a></li>
+                        <li><a href="">我的余额</a></li>
+                        <li><a href="">我的订单</a></li>
+                        <li><a href="">地址管理</a></li>
+                        <li><a href="">个人信息</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <a href="">
+                            <span><img src="../public/images/vipHead.png" alt=""></span>
+                            <button>注册 | 登录</button>
+                        </a>
+
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <img src="../public/images/vipMidCon1.png" alt="">
+                            <p>我的卡卷</p>
+                            <p class="oP">---</p>
+                        </div>
+                        <div class="mid">
+                            <img src="../public/images/vipMidCon2.png" alt="">
+                            <p>我的K金</p>
+                            <p class="oP">---</p>
+                        </div>
+                        <div class="right1">
+                            <img src="../public/images/vipMidCon3.png" alt="">
+                            <p>我的余额</p>
+                            <p class="oP">---</p>
+                        </div>
+                    </div>
+                    <!--down组件-->
+                    <my-app></my-app>
+                </div>
+            </div>
+
+        </div>
+        <my-foot></my-foot>
+    </div>
+<script>
+    'use strick';
+     
+</script>
+</body>
+</html>

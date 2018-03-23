@@ -21,7 +21,7 @@ function vue1 () {
 					        <a class="navbar-brand rightText" href="#">菜单</a> |
 					    </div> 
 					    <div class="myLogo"> 
-					        <a class="navbar-brand" href="#">会员中心</a> 
+					        <a class="navbar-brand" href="vip">会员中心</a> 
 					    </div> 
 					    <div class="myLogo" > 
 					        <ul class="nav navbar-nav"> 
@@ -156,6 +156,37 @@ function vue1 () {
             }
         }
     );
+
+   Vue.component(
+       'my-app',
+       {
+           template:` <div class="down">
+            <div class="left">
+                <div class="top">下载成都三人行</div>
+                <div class="bottom">
+                    <ul>
+                        <li><img src="./images/gou.png" alt=""><span>外送订餐更加方便</span></li>
+                        <li><img src="./images/gou.png" alt=""><span>餐厅和外送消费都能赚K金积分</span></li>
+                        <li><img src="./images/gou.png" alt=""><span>全新K金商城，好礼兑不停</span></li>
+                        <li><img src="./images/gou.png" alt=""><span>优惠券商城，独家优惠天天享</span></li>
+                        <li><img src="./images/gou.png" alt=""><span>超级App，轻松好用，一手掌控</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="ios">
+                    <img src="./images/ios.png" width="94" height="94" alt="">
+                    <span>ios下载</span>
+                </div>
+                <div class="Android">
+                    <img src="./images/android.png" width="94" height="94" alt="">
+                    <span>Android下载</span>
+                </div>
+            </div>
+        </div>`
+       }
+   )
+
 }
 
 function myvue1 (argument) {

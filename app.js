@@ -34,7 +34,9 @@ app.get('/index',function (req,res) {
     })
 });
 
-
+app.get('/vip',function (req,res) {
+    res.render('vip',{})
+});
 
 
 

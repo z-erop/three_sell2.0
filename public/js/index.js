@@ -76,9 +76,9 @@ $(function(){
     //     }
     //     }
     // })
-    $.get('http://192.168.2.166:8082/index',function (data) {
-        console.log(data)
-    })
+    // $.get('http://192.168.2.166:8082/index',function (data) {
+    //     console.log(data)
+    // })
 
 });
 

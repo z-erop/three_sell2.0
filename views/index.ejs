@@ -5,17 +5,33 @@
     <meta name="Generator" content="">
     <meta name="Author" content="">
     <meta name="Keywords" content="关键词">
+
+    <!--三个bootstrap带有的meta标签-->
     <meta name="Description" content="描述">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
     <link rel="stylesheet" href="css/index.css">
+
+
+    <script src="./vue.js"></script>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <script src="http://apps.bdimg.com/libs/vue/1.0.8/vue.js"></script>
 
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <!-- 引入组件库 -->
-    <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
 
+
+    <script src="js/MyTop.js"></script>
+    <link rel="stylesheet" href="css/myTop.css">
+    <link rel="stylesheet" href="css/myFoot.css">
     <title>one is never too old to learn </title>
     <style>
         * {margin: 0;padding: 0;font-family: Microsoft YaHei, serif;}
@@ -28,6 +44,12 @@
     </style>
 </head>
 <body>
+
+<div id="app">
+    <my-top></my-top>
+
+
+
     <div class="Body" id="Body">
         <!--轮播-->
         <div class="banner">
@@ -104,32 +126,10 @@
             <div class="bottom"><img src="./images/join.jpg" width="1200" height="260" alt=""></div>
         </div>
         <!--downLoad-->
-        <div class="down">
-            <div class="left">
-                <div class="top">下载成都三人行</div>
-                <div class="bottom">
-                    <ul>
-                        <li><img src="./images/gou.png" alt=""><span>外送订餐更加方便</span></li>
-                        <li><img src="./images/gou.png" alt=""><span>餐厅和外送消费都能赚K金积分</span></li>
-                        <li><img src="./images/gou.png" alt=""><span>全新K金商城，好礼兑不停</span></li>
-                        <li><img src="./images/gou.png" alt=""><span>优惠券商城，独家优惠天天享</span></li>
-                        <li><img src="./images/gou.png" alt=""><span>超级App，轻松好用，一手掌控</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="right">
-                <div class="ios">
-                    <img src="./images/ios.png" width="94" height="94" alt="">
-                    <span>ios下载</span>
-                </div>
-                <div class="Android">
-                    <img src="./images/android.png" width="94" height="94" alt="">
-                    <span>Android下载</span>
-                </div>
-            </div>
-        </div>
+        <my-app></my-app>
     </div>
-
+<my-foot></my-foot>
+</div>
 <script>
     'use strick';
      
