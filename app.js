@@ -5,6 +5,8 @@
 var express = require('express');
 //引入数据库写好的文件
 var user = require('./userDao/user');
+var crypto = require('crypto');
+var md5 = crypto.createHash('md5');
 
 //获得experss对象
 
@@ -38,7 +40,27 @@ app.get('/vip',function (req,res) {
     res.render('vip',{})
 });
 
+app.post('/zhuce',urlencodedParser,function (req,res) {
+   var name = req.body.id;
+   // var pwd = req.body.passwd;
+   var pwd = md5.update(req.body.passwd).digest('hex');
 
+   //这里使用到数据库了，哈哈
+    var dao = new user();
+    dao.init();//数据库初始化，链接数据库
+    //开始执行查询语句，是为了判断用户名是否被注册，
+    dao.getName(name,function (data) {
+        console.log(data);
+        if (data.length==0){
+            //走这里表示注册的名字在数据库不存在，可以正常注册
+            dao.insert(name,pwd,function () {
+                console.log('我向数据库注册数据成功了');
+                    res.render('index',{})
+            })
+        }
+    })
+
+});
 
 
 var server = app.listen(8082,function () {

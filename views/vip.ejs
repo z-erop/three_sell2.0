@@ -57,25 +57,63 @@
                 </div>
                 <div class="right">
                     <div class="top">
-                        <a href="">
-                            <span><img src="../public/images/vipHead.png" alt=""></span>
-                            <button>注册 | 登录</button>
-                        </a>
-
+                        <span><img src="images/vipHead.png" alt=""></span>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">注册 | 登录</button>
                     </div>
+
+                    <!--模态框开始-->
+                    <!-- 模态框 -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- 模态框头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">朱佩外卖侠</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- 模态框主体 -->
+                                <div class="modal-body">
+                                    <div class="re">
+                                        <form action="zhuce"method="post">
+                                            <p>账号：<input name="id" type="text"></p>
+                                            <p>密码：<input name="passwd" type="password"></p>
+                                            <p>再次输入密码：<input type="password"></p>
+                                            <button type="submit">注册</button>
+                                        </form>
+                                    </div>
+                                    <div class="login">
+                                        <form action="">
+                                            <p>账号：<input type="text"></p>
+                                            <p>密码：<input type="password"></p>
+                                            <button type="submit">登录</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                                <!-- 模态框底部 -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--模态框结束-->
                     <div class="bottom">
                         <div class="left">
-                            <img src="../public/images/vipMidCon1.png" alt="">
+                            <img src="images/vipMidCon1.png" alt="">
                             <p>我的卡卷</p>
                             <p class="oP">---</p>
                         </div>
                         <div class="mid">
-                            <img src="../public/images/vipMidCon2.png" alt="">
+                            <img src="images/vipMidCon2.png" alt="">
                             <p>我的K金</p>
                             <p class="oP">---</p>
                         </div>
                         <div class="right1">
-                            <img src="../public/images/vipMidCon3.png" alt="">
+                            <img src="images/vipMidCon3.png" alt="">
                             <p>我的余额</p>
                             <p class="oP">---</p>
                         </div>

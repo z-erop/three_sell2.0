@@ -93,7 +93,6 @@
     display: inline-block;
     width:130px;
     height:40px;
-    margin-left: 10px;
     background: #F04E4E;
     border: none;
     font-size: 16px;
@@ -130,6 +129,15 @@
     height: 50px;
     color: #000;
 }
+/*模态框样式*/
+#myModal{
+    width: 800px;
+    height:800px;
+}
+.modal-body .login{
+    display: none;
+}
+
 /*downLoad*/
 .down{
     width:100%;

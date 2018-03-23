@@ -31,6 +31,33 @@ function user() {
                 return;
             }
         })
+    };
+    this.getName = function (name,call) {
+        var sql = 'select * from admins where username = '+name;
+        console.log(sql);
+        connection.query(sql,function (err,res) {
+            if (!err){
+                call(res)
+            }else{
+                console.log('查找用户名没搞对');
+                return;
+            }
+        })
+    };
+    //插入语句
+    this.insert = function (name,passwd,call) {
+        console.log('执行')
+        var sql = 'INSERT INTO admins(username,passwd) VALUES(?,?)';
+        var sql_params = [name,passwd];
+        connection.query(sql,sql_params,function (err,res) {
+            console.log(11)
+            if (!err){
+                console.log(res)
+            }
+            else{
+                console.log(sql_params);
+            }
+        })
     }
 
 
