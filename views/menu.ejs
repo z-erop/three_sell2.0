@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="./vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="./js/MyTop.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/myTop.css"/>
+		
+		<!--<script src="./js/menu/MyFoot.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/myFoot.css"/>
+		
+	</head>
+	<body onload="">
+		<div id="app">
+			<my-top></my-top>
+
+			<div class="menu_box">
+			<div class="contents">
+				<div class="left_list"> 
+					<ul class="menu_list">
+						<li><a href="cid" dta-cid="1" id="1">当季特选</a></li>
+						<li><a href="" dta-cid="2">超值套餐</a></li>
+						<li><a href="#piz" dta-cid="3" id="3">披萨</a></li>
+						<li><a href="" dta-cid="4">意面</a></li>
+						<li><a href="" dta-cid="5">饭食</a></li>
+						<li><a href="" dta-cid="6">小吃</a></li>
+						<li><a href="" dta-cid="7">汤</a></li>
+						<li><a href="" dta-cid="8">饮料</a></li>
+					</ul>
+				</div>
+				
+				<div class="right_contents">
+                    <%menuData.forEach(function (menuData) {%>
+					<div class="item">
+						<div class="imgBox">
+							<img class="img" src="<%=menuData.images%>"/>
+						</div>
+						<div class="pizTitle">
+                            <%=menuData.foodname%>
+						</div>
+						<div class="order">
+							<span>开始点餐</span>
+						</div>
+					</div>
+
+                    <%})%>
+
+
+				</div>	
+					<script type="text/javascript">
+						let vm=new Vue({
+							el:'.right_contents',
+							data:{
+
+							}
+						})
+
+					</script>
+				
+				
+			</div>
+		</div>
+			
+			
+		<my-foot></my-foot>
+	</div>
+
+		
+		
+
+		
+	
+		
+		
+		
+	</body>
+</html>

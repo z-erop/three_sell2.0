@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="./vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="./js/MyTop.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/myTop.css"/>
+		
+		<!--<script src="./js/menu/MyFoot.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/myFoot.css"/>
+		
+	</head>
+	<body>
+		<div id="app">
+			<my-top></my-top>
+
+
+			<%menuData.forEach(function (menuData) {%>
+			  <%=menuData.foodname%>
+			<%})%>
+
+			<div class="menu_box">
+			<div class="contents">
+				<div class="left_list"> 
+					<ul class="menu_list">
+						<li><a href="">当季特选</a></li>
+						<li><a href="">超值套餐</a></li>
+						<li><a href="">披萨</a></li>
+						<li><a href="">意面</a></li>
+						<li><a href="">饭食</a></li>
+						<li><a href="">小吃</a></li>
+						<li><a href="">汤</a></li>
+						<li><a href="">饮料</a></li>
+					</ul>
+				</div>
+				
+				<div class="right_contents">
+					
+			
+					<div class="item" v-for="menulist in menulists">
+						<div class="imgBox">
+							<img class="img" v-bind:src="menulist.src"/>
+						</div>
+						<div class="pizTitle">
+							{{menulist.name}}
+						</div>
+						<div class="order">
+							<span>开始点餐</span>
+						</div>
+					</div>
+				</div>	
+					<script type="text/javascript">
+						let vm=new Vue({
+							el:'.right_contents',
+							data:{
+								menulists:[
+								{name:'聚乐盒(芝心)',src:'./images/piz01.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz02.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz03.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz04.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz05.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz06.jpg'},
+								{name:'聚乐盒(芝心)',src:'./images/piz07.jpg'}
+								]
+							}
+						})
+
+					</script>
+				
+				
+			</div>
+		</div>
+			
+			
+		<my-foot></my-foot>
+	</div>
+
+		
+		
+
+		
+	
+		
+		
+		
+	</body>
+</html>
