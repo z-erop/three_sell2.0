@@ -80,5 +80,17 @@ $(function(){
     //     console.log(data)
     // })
 
+
+    var onoff  = false;
+    $('.userName-con b').click(function () {
+        if (!onoff){
+            $('.dropdown-ul').css('display','block')
+        }else{
+            $('.dropdown-ul').css('display','none')
+        }
+        onoff = !onoff;
+    })
+
+
 });
 

@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/myTop.css">
     <link rel="stylesheet" href="css/myFoot.css">
     <script src="http://apps.bdimg.com/libs/vue/1.0.8/vue.js"></script>
+    <script src="js/vip.js"></script>
     <title>one is never too old to learn </title>
     <style>
         * {margin: 0;padding: 0;font-family: Microsoft YaHei, serif;}
@@ -39,11 +40,14 @@
 </head>
 <body>
     <div id="app">
-        <my-top></my-top>
+        <my-top v-bind:vip="<%=infor.user%>"></my-top>
+
          <div class="Body">
             <div class="vipTop"></div>
             <div class="vipMiddle"></div>
-            <div class="vipContent">
+             <div class="vipContent-wrap container">
+
+                <div class="vipContent">
                 <div class="left">
                     <ul>
                         <li><a href="" >会员首页</a></li>
@@ -56,10 +60,54 @@
                     </ul>
                 </div>
                 <div class="right">
-                    <div class="top">
+                    <div class="top" id="flag" data-flag="<%=flag%>">
                         <span><img src="images/vipHead.png" alt=""></span>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">注册 | 登录</button>
+                        <div class="btn-wrap">
+                            <%    if (infor.user){%>
+                             <h3><%=infor.user%></h3>
+                            <%  }else{ %>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">注册</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">登录</button>
+                           <%  } %>
+
+
+
+
+                        </div>
+
                     </div>
+
+
+                    <!--模态框开始-->
+                    <!-- 模态框 -->
+                    <div class="modal fade" id="myModal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- 模态框头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">成都三人行外卖平台</h4>
+                                </div>
+                                <!-- 模态框主体 -->
+                                <div class="modal-body">
+                                    <div class="login">
+                                        <form action=""  class="form-group">
+                                            <p>账号：<input class="form-control inp1" name="name1" type="text"></p>
+                                            <p>密码：<input class="form-control inp2" name="pwd1" type="password"></p>
+                                            <p>重复密码：<input class="form-control inp3" name="pwd1" type="password"></p>
+                                            <button type="button" id="reg" class="btn btn-primary">注册</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- 模态框底部 -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--模态框结束-->
+
+
 
                     <!--模态框开始-->
                     <!-- 模态框 -->
@@ -68,35 +116,25 @@
                             <div class="modal-content">
                                 <!-- 模态框头部 -->
                                 <div class="modal-header">
-                                    <h4 class="modal-title">朱佩外卖侠</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">成都三人行外卖平台</h4>
+                                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
                                 </div>
 
                                 <!-- 模态框主体 -->
+
                                 <div class="modal-body">
-                                    <div class="re">
-                                        <form action="zhuce"method="post">
-                                            <p>账号：<input name="id" type="text"></p>
-                                            <p>密码：<input name="passwd" type="password"></p>
-                                            <p>再次输入密码：<input type="password"></p>
-                                            <button type="submit">注册</button>
-                                        </form>
-                                    </div>
                                     <div class="login">
-                                        <form action="">
-                                            <p>账号：<input type="text"></p>
-                                            <p>密码：<input type="password"></p>
-                                            <button type="submit">登录</button>
+                                        <form action=""  class="form-group">
+                                            <p>账号：<input class="form-control name1" name="name1" type="text"></p>
+                                            <p>密码：<input class="form-control pwd1" name="pwd1" type="password"></p>
+                                            <button type="button" id="login" class="btn btn-primary">登录</button>
                                         </form>
                                     </div>
-
                                 </div>
-
                                 <!-- 模态框底部 -->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -122,7 +160,7 @@
                     <my-app></my-app>
                 </div>
             </div>
-
+             </div>
         </div>
         <my-foot></my-foot>
     </div>

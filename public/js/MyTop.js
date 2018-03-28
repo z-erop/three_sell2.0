@@ -1,6 +1,22 @@
 window.onload = function () {
     vue1();
     myvue1();
+
+
+    var onoff  = false;
+    $('#oB').click(function () {
+        console.log(13)
+        if (!onoff){
+            $('.dropdown-ul').css('display','block')
+        }else{
+            $('.dropdown-ul').css('display','none')
+        }
+        onoff = !onoff;
+    })
+
+
+
+
 }
 
 function vue1 () {
@@ -10,51 +26,40 @@ function vue1 () {
         'my-top',
         {
             //标签内容   template 关键字
-            template:`'<div class="topBox">
-						<nav class="navbar navbar-default navbar-fixed-top navTop" role="navigation"> 
-						
-						<div class="myLogo logo"> 
-					        <a class="navbar-brand" href="#"> </a> 
-					    </div> 
-					    
-					    <div class="myLogo " > 
-					        <a class="navbar-brand rightText" href="#">菜单</a> |
-					    </div> 
-					    <div class="myLogo"> 
-					        <a class="navbar-brand" href="vip">会员中心</a> 
-					    </div> 
-					    <div class="myLogo" > 
-					        <ul class="nav navbar-nav"> 
-					            <li class="dropdown"> 
-					                <a href="#" class="dropdown-toggle rightText" data-toggle="dropdown"> 
-					                    Java <b class="caret"></b> 
-					                </a> 
-					                <ul class="dropdown-menu"> 
-					                    <li><a href="#">个人资料</a></li> 
-					                    <li class="divider"></li> 
-					                    <li><a href="#">订单管理</a></li> 
-					                    <li class="divider"></li> 
-					                    <li><a href="#">退出登录</a></li> 
-					                </ul> 
-					            </li> 
-					        </ul> 
-					    </div> 
-					    <span class="line"> | </span>
-					    <div class="navbar-header myLogo"> 
-					        <a class="navbar-brand" href="#">我的卡券(7)</a> 
-					    </div> 
-					    <div class="MyOrder">   
-					        <a class="" href="#">继续点餐</a> 
-					    </div> 
-					   
-					</nav>
-				</div>'`,
+                        template:` <div class="top">
+                    <div class="header">
+                        <div class="left">
+                            <a href="index" class="logoo" ></a>
+                            <a href="menu" class="menu">菜单</a>
+                            <a href="vip" class="user">会员中心</a>
+                        </div>
+            
+                        <div class="userName">
+                                <div class="userName-con">
+                                    <span></span>{{vip}}
+                                    <b id="oB"></b>
+                                </div>
+                                <ul class="dropdown-ul">
+                                    <li><a href="#">个人资料</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">订单管理</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" class="exitOut">退出登录</a></li>
+                                </ul>
+                            <div class="userCard">
+                                <a class="navbar-brand" href="#">我的卡券(7)</a>
+                            </div>
+                        </div>
+                        <p>继续点餐</p>
+                    </div>
+                </div>`,
             //需要传的值，需再props内注明
-            props:['number_f', 'mydata'],
+            props:['number_f', 'mydata','vip'],
             data: function () {
                 return {
                     number:this.number_f,
                     noprop:''
+                    // vip : '<%=infor%>'
                 };
             },
             mounted:function () {
@@ -192,5 +197,6 @@ function vue1 () {
 function myvue1 (argument) {
     new Vue({
         el:'#app'
+
     });
 }

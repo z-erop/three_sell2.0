@@ -1,7 +1,7 @@
 *{
 	margin: 0; padding: 0;text-decoration: none;list-style: none;
 }
-a:link,a:visited,a:hover,a:active{
+a:link,a:hover,a:active,a:visited{
 	text-decoration: none;
 }
 .menu_box{
@@ -35,6 +35,10 @@ a:link,a:visited,a:hover,a:active{
 }
 .menu_list>li>a:hover{
 	color: #EF635F;	
+	border-bottom: 1px solid #EF635F;
+}
+.list_active{
+	color: #EF635F !important;
 	border-bottom: 1px solid #EF635F;
 }
 .right_contents{

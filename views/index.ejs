@@ -46,16 +46,15 @@
 <body>
 
 <div id="app">
-    <my-top></my-top>
-
-
+    <my-top v-bind:vip="<%=session%>"></my-top>
 
     <div class="Body" id="Body">
         <!--轮播-->
         <div class="banner">
             <div class="pic">
                 <ul>
-                    <% infor.forEach(function (ob) {%>
+                    <%=infor%>
+                    <% infor.index.forEach(function (ob) {%>
                         <li> <img src=" <%= ob.img %>" alt="">
                     <%}) %>
 
@@ -131,8 +130,13 @@
 <my-foot></my-foot>
 </div>
 <script>
+
     'use strick';
-     
+
+    var vue = Vue({
+        el:"#app"
+    });
+
 </script>
 </body>
 </html>
